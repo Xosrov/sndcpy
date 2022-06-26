@@ -29,4 +29,4 @@ fi
 sleep 2
 
 echo Playing audio...
-"$VLC" -Idummy --demux rawaud --network-caching=0 --play-and-exit tcp://localhost:"$SNDCPY_PORT"
+"$VLC" -Idummy --demux rawaud --network-caching=0 --play-and-exit tcp://localhost:"$SNDCPY_PORT" || "$ADB" $serial uninstall com.rom1v.sndcpy
